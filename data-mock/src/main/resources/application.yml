@@ -1,0 +1,58 @@
+#并行模拟数据的线程数
+dataCount:
+ mockCount: 1
+ hiveDataCount: 20
+
+sleepMs:
+ logSleep: 1000
+ redisMockSleep: 10000
+ mysqlMockSleep: 1000
+ ckMockSleep: 1000
+ hbaseMockSleep: 1000
+ esMockSleep: 1000
+
+dest:
+ logUrl: http://localhost:8089/app
+ redisDataKey: hotphone
+ param: logStr
+
+mybatis:
+  configuration:
+    mapUnderscoreToCamelCase: true
+
+
+spring:
+  elasticsearch:
+    uris: http://36.32.174.117:9200
+  datasource:
+    dynamic:
+      primary: mysql
+      strict: false
+      datasource:
+        mysql:
+          url: jdbc:mysql://36.32.174.69:3306/ad?useSSL=false&useUnicode=true&characterEncoding=UTF-8
+#          url: jdbc:mysql://172.20.7.167:3307/Mybatis?useSSL=false&useUnicode=true&characterEncoding=UTF-8
+          username: root
+#          password: "MySQL!23"
+          password: "000000"
+          driver-class-name: com.mysql.cj.jdbc.Driver
+        ck:
+#          url: jdbc:clickhouse://172.20.7.167:18123/default
+          url: jdbc:clickhouse://36.32.174.72:18123/default
+          username: default
+          password: Ck18123
+          driver-class-name: com.clickhouse.jdbc.ClickHouseDriver
+        hbase:
+          url: jdbc:phoenix:36.32.174.69,36.32.174.70,36.32.174.71:2181
+          username:
+          password:
+          driver-class-name: org.apache.phoenix.jdbc.PhoenixDriver
+
+  redis:
+#    host: 172.20.7.167
+    host: 36.32.174.72
+    port: 16379
+    password: Redis6379
+    database: 2
+
+

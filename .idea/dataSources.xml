@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="qilu-poc" uuid="403f9df9-3aeb-49d6-85dc-f1f8750dfb61">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://172.20.7.167:3307/</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+    <data-source source="LOCAL" name="qilu-poc-ck" uuid="5c9dffc4-4b4a-4747-8b38-8120713131d7">
+      <driver-ref>clickhouse</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.clickhouse.jdbc.ClickHouseDriver</jdbc-driver>
+      <jdbc-url>jdbc:clickhouse://172.20.7.167:18123/default</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+    <data-source source="LOCAL" name="wf-dev-mysql-69" uuid="16ba416b-fe3b-4164-bfe7-12eba9e26284">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://36.32.174.69:3306/?useSSL=false&amp;useUnicode=true&amp;characterEncoding=UTF-8</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+    <data-source source="LOCAL" name="wf-dev-phoenix-69" uuid="952e2f44-14e5-4285-8544-afa74a869b2d">
+      <driver-ref>phoenix.thick</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.apache.phoenix.jdbc.PhoenixDriver</jdbc-driver>
+      <jdbc-url>jdbc:phoenix:36.32.174.69:2181</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+      <driver-properties>
+        <property name="phoenix.schema.isNamespaceMappingEnabled" value="true" />
+        <property name="phoenix.schema.mapSystemTablesToNamespace" />
+      </driver-properties>
+    </data-source>
+  </component>
+</project>
